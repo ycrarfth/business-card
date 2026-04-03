@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212; /* Dark background */
+            background-color: #121212;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,14 +17,14 @@
             color: #e0e0e0;
         }
         .card {
-            background: #1e1e1e; /* Darker card color */
+            background: #1e1e1e;
             width: 90%;
             max-width: 400px;
             border-radius: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             overflow: hidden;
             text-align: center;
-            padding-bottom: 30px;
+            padding-bottom: 20px;
             border: 1px solid #333;
         }
         .header {
@@ -44,7 +44,7 @@
         }
         .section h3 {
             margin: 0 0 5px 0;
-            color: #e67e22; /* Orange accent */
+            color: #e67e22;
             font-size: 18px;
             text-transform: uppercase;
         }
@@ -75,7 +75,7 @@
             font-size: 15px;
             transition: 0.3s ease;
         }
-        .btn-wa { background: #25D366; color: white; } /* WhatsApp Green */
+        .btn-wa { background: #25D366; color: white; }
         .btn-save { background: #e67e22; color: white; }
         .btn-map { background: #4285F4; color: white; }
         .btn-insta { 
@@ -84,10 +84,29 @@
         }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        .footer {
-            font-size: 12px;
-            color: #555;
+        .developer-section {
             margin-top: 25px;
+            padding: 15px;
+            background: #151515;
+            border-top: 1px dashed #444;
+        }
+        .developer-title {
+            font-size: 11px;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .dev-info {
+            font-size: 13px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .footer {
+            font-size: 11px;
+            color: #444;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -102,9 +121,8 @@
     <div class="section">
         <h3>Tyre Shop</h3>
         <p>New & Second-hand Tyres</p>
-        <p>📞 <a href="tel:6238726103" class="phone-link">9061819276</a> (SHOP)</p>
-        <p>📞 <a href="tel:9061819276" class="phone-link">9744492190</a></p>
-        <p>📞 <a href="tel:9061819276" class="phone-link">9633327823</a></p>
+        <p>📞 <a href="tel:6238726103" class="phone-link">6238726103</a> (Yasir)</p>
+        <p>📞 <a href="tel:9061819276" class="phone-link">9061819276</a></p>
     </div>
 
     <div class="section">
@@ -114,30 +132,24 @@
     </div>
 
     <div class="section">
-        <p>📧 yasirarafath071@gmail.com</p>
+        <p>📧 yasi.arafath071@gmail.com</p>
         <p>📍 Aryambavu, Mannarkkad</p>
     </div>
 
     <div class="btn-container">
-        <a href="https://wa.me/919744492190" 
-           target="_blank" class="btn btn-wa">
-           💬 WHATSAPP US
-        </a>
+        <a href="https://wa.me/919744492190" target="_blank" class="btn btn-wa">💬 WHATSAPP US</a>
+        <a href="https://www.instagram.com/ycrarfth?igsh=bDZhczlyb3hwMXc2" target="_blank" class="btn btn-insta">📸 FOLLOW ON INSTAGRAM</a>
+        <a href="https://www.google.com/maps/search/Aryambavu+Mannarkkad" target="_blank" class="btn btn-map">📍 OPEN IN GOOGLE MAPS</a>
+        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasi.arafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts%0AEND:VCARD" download="Yasir_Arafath.vcf" class="btn btn-save">💾 SAVE ALL CONTACTS</a>
+    </div>
 
-        <a href="https://www.instagram.com/ycrarfth?igsh=bDZhczlyb3hwMXc2" 
-           target="_blank" class="btn btn-insta">
-           📸 INSTAGRAM
-        </a>
-
-        <a href="https://www.google.com/maps/search/Aryambavu+Mannarkkad" 
-           target="_blank" class="btn btn-map">
-           📍 OPEN IN GOOGLE MAPS
-        </a>
-
-        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasi.arafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts%0AURL:https://www.instagram.com/ycrarfth%0AADR;TYPE=WORK:;;Aryambavu;Mannarkkad;;;India%0AEND:VCARD" 
-           download="Yasir_Arafath.vcf" class="btn btn-save">
-           💾 SAVE ALL CONTACTS
-        </a>
+    <div class="developer-section">
+        <div class="developer-title">Scanner Created By</div>
+        <div class="dev-info">
+            <strong>Yasir Arafath</strong><br>
+            📞 6238726103<br>
+            📧 yasirarafath071@gmail.com
+        </div>
     </div>
 
     <div class="footer">
