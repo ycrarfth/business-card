@@ -7,28 +7,31 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #121212; /* Dark background */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
             padding: 20px 0;
+            color: #e0e0e0;
         }
         .card {
-            background: white;
+            background: #1e1e1e; /* Darker card color */
             width: 90%;
             max-width: 400px;
             border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             overflow: hidden;
             text-align: center;
             padding-bottom: 30px;
+            border: 1px solid #333;
         }
         .header {
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
             padding: 40px 20px;
+            border-bottom: 2px solid #e67e22;
         }
         .header h1 {
             margin: 0;
@@ -37,21 +40,21 @@
         }
         .section {
             padding: 15px 25px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #2d2d2d;
         }
         .section h3 {
             margin: 0 0 5px 0;
-            color: #e67e22;
+            color: #e67e22; /* Orange accent */
             font-size: 18px;
             text-transform: uppercase;
         }
         .section p {
             margin: 5px 0;
-            color: #444;
+            color: #bbb;
             font-size: 14.5px;
         }
         .phone-link {
-            color: #2980b9;
+            color: #64b5f6;
             text-decoration: none;
             font-weight: bold;
         }
@@ -72,7 +75,8 @@
             font-size: 15px;
             transition: 0.3s ease;
         }
-        .btn-save { background: #27ae60; color: white; }
+        .btn-wa { background: #25D366; color: white; } /* WhatsApp Green */
+        .btn-save { background: #e67e22; color: white; }
         .btn-map { background: #4285F4; color: white; }
         .btn-insta { 
             background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -82,7 +86,7 @@
 
         .footer {
             font-size: 12px;
-            color: #bbb;
+            color: #555;
             margin-top: 25px;
         }
     </style>
@@ -109,11 +113,16 @@
     </div>
 
     <div class="section">
-        <p>📧 <strong>yasi.arafath071@gmail.com</strong></p>
+        <p>📧 yasi.arafath071@gmail.com</p>
         <p>📍 Aryambavu, Mannarkkad</p>
     </div>
 
     <div class="btn-container">
+        <a href="https://wa.me/919744492190" 
+           target="_blank" class="btn btn-wa">
+           💬 WHATSAPP US
+        </a>
+
         <a href="https://www.instagram.com/ycrarfth?igsh=bDZhczlyb3hwMXc2" 
            target="_blank" class="btn btn-insta">
            📸 FOLLOW ON INSTAGRAM
