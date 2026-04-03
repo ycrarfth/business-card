@@ -15,7 +15,57 @@
             margin: 0;
             padding: 20px 0;
             color: #e0e0e0;
+            overflow-x: hidden;
         }
+
+        /* SIDEBAR SETTINGS */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            right: 0;
+            background-color: #1a1a1a;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 60px;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+            border-left: 1px solid #333;
+        }
+        .sidenav-content {
+            padding: 20px;
+            color: #bbb;
+            text-align: left;
+        }
+        .sidenav h2 {
+            color: #e67e22;
+            font-size: 18px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 36px;
+            color: #888;
+            text-decoration: none;
+        }
+
+        /* GEAR ICON BUTTON */
+        .settings-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #888;
+            transition: 0.3s;
+            z-index: 10;
+        }
+        .settings-icon:hover { color: #e67e22; }
+
         .card {
             background: #1e1e1e;
             width: 90%;
@@ -24,95 +74,51 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             overflow: hidden;
             text-align: center;
-            padding-bottom: 20px;
+            padding-bottom: 30px;
             border: 1px solid #333;
+            position: relative;
         }
         .header {
             background: linear-gradient(135deg, #0f172a, #1e293b);
             color: white;
-            padding: 40px 20px;
+            padding: 45px 20px;
             border-bottom: 2px solid #e67e22;
         }
-        .header h1 {
-            margin: 0;
-            font-size: 26px;
-            letter-spacing: 1px;
-        }
-        .section {
-            padding: 15px 25px;
-            border-bottom: 1px solid #2d2d2d;
-        }
-        .section h3 {
-            margin: 0 0 5px 0;
-            color: #e67e22;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
-        .section p {
-            margin: 5px 0;
-            color: #bbb;
-            font-size: 14.5px;
-        }
-        .phone-link {
-            color: #64b5f6;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-            margin-top: 25px;
-        }
-        .btn {
-            display: inline-block;
-            width: 85%;
-            padding: 14px 0;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 15px;
-            transition: 0.3s ease;
-        }
+        .header h1 { margin: 0; font-size: 26px; letter-spacing: 1px; }
+        
+        .section { padding: 15px 25px; border-bottom: 1px solid #2d2d2d; }
+        .section h3 { margin: 0 0 5px 0; color: #e67e22; font-size: 18px; text-transform: uppercase; }
+        .section p { margin: 5px 0; color: #bbb; font-size: 14.5px; }
+        
+        .phone-link { color: #64b5f6; text-decoration: none; font-weight: bold; }
+        
+        .btn-container { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 25px; }
+        .btn { display: inline-block; width: 85%; padding: 14px 0; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 15px; transition: 0.3s ease; }
         .btn-wa { background: #25D366; color: white; }
         .btn-save { background: #e67e22; color: white; }
         .btn-map { background: #4285F4; color: white; }
-        .btn-insta { 
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            color: white; 
-        }
+        .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
-        .developer-section {
-            margin-top: 25px;
-            padding: 15px;
-            background: #151515;
-            border-top: 1px dashed #444;
-        }
-        .developer-title {
-            font-size: 11px;
-            color: #777;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-        .dev-info {
-            font-size: 13px;
-            color: #999;
-            line-height: 1.6;
-        }
-
-        .footer {
-            font-size: 11px;
-            color: #444;
-            margin-top: 15px;
-        }
+        .footer { font-size: 11px; color: #444; margin-top: 25px; }
     </style>
 </head>
 <body>
 
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="sidenav-content">
+      <h2>About Developer</h2>
+      <p><strong>Name:</strong> Yasir Arafath</p>
+      <p><strong>Phone:</strong> 6238726103</p>
+      <p><strong>Email:</strong> yasirarafath071@gmail.com</p>
+      <p style="font-size: 12px; color: #555; margin-top: 20px;">Digital Scanner v1.0</p>
+  </div>
+</div>
+
 <div class="card">
+    <div class="settings-icon" onclick="openNav()">⚙️</div>
+
     <div class="header">
         <h1>Yasir Arafath MK</h1>
         <p>Tyres • Batteries • Spare Parts</p>
@@ -143,19 +149,20 @@
         <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasi.arafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts%0AEND:VCARD" download="Yasir_Arafath.vcf" class="btn btn-save">💾 SAVE ALL CONTACTS</a>
     </div>
 
-    <div class="developer-section">
-        <div class="developer-title">Scanner Created By</div>
-        <div class="dev-info">
-            <strong>Yasir Arafath</strong><br>
-            📞 6238726103<br>
-            📧 yasirarafath071@gmail.com
-        </div>
-    </div>
-
     <div class="footer">
         Aryambavu, Mannarkkad, Kerala
     </div>
 </div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 </body>
 </html>
