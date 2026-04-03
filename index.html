@@ -3,73 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasir Arafath MK - Business Card</title>
+    <title>Yasir Arafath MK | Premium Auto Services</title>
     <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-gold: #fbbf24;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --border-color: #334155;
+            --whatsapp-green: #25D366;
+            --insta-pink: #E1306C;
+            --fb-blue: #1877F2;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f9;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
+            padding: 20px;
         }
+
         .card {
-            background: white;
-            width: 90%;
+            background: var(--card-bg);
+            width: 100%;
             max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            border: 1px solid var(--border-color);
             overflow: hidden;
             text-align: center;
-            padding-bottom: 20px;
         }
+
         .header {
-            background: #2c3e50;
-            color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 2px solid var(--accent-gold);
         }
+
         .header h1 {
             margin: 0;
-            font-size: 24px;
-            letter-spacing: 1px;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--accent-gold);
         }
+
         .header p {
-            margin: 5px 0 0;
-            opacity: 0.8;
-        }
-        .section {
-            padding: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .section h3 {
-            margin-top: 0;
-            color: #e67e22;
-            font-size: 18px;
-        }
-        .details p {
-            margin: 8px 0;
-            color: #555;
+            margin: 8px 0 0;
             font-size: 14px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
-        .btn-save {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 12px 25px;
+
+        .content {
+            padding: 10px 25px 30px;
+        }
+
+        .section {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        .section h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent-gold);
+            font-size: 16px;
+        }
+
+        .phone-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.05);
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin-top: 8px;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
+            color: var(--text-main);
+            transition: 0.3s;
+        }
+
+        .phone-row:hover {
+            background: rgba(251, 191, 36, 0.1);
+        }
+
+        /* Social Buttons Grid */
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
             margin-top: 20px;
-            transition: background 0.3s;
         }
-        .btn-save:hover {
-            background: #219150;
+
+        .social-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 5px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: 600;
+            color: white;
+            transition: transform 0.2s;
         }
-        .footer {
-            font-size: 12px;
-            color: #aaa;
-            margin-top: 15px;
+
+        .social-btn:active { transform: scale(0.95); }
+
+        .whatsapp { background: var(--whatsapp-green); }
+        .instagram { background: var(--insta-pink); }
+        .facebook { background: var(--fb-blue); position: relative; }
+
+        .coming-soon-tooltip {
+            visibility: hidden;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            position: absolute;
+            z-index: 1;
+            bottom: 110%;
+            font-size: 10px;
+            white-space: nowrap;
+        }
+
+        .facebook:focus .coming-soon-tooltip, 
+        .facebook:hover .coming-soon-tooltip {
+            visibility: visible;
+        }
+
+        .btn-save {
+            display: block;
+            background: var(--accent-gold);
+            color: #000;
+            padding: 16px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            margin-top: 25px;
+            font-size: 16px;
+        }
+
+        .location-tag {
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-dim);
         }
     </style>
 </head>
@@ -78,37 +166,42 @@
 <div class="card">
     <div class="header">
         <h1>Yasir Arafath MK</h1>
-        <p>Multi-Business Entrepreneur</p>
+        <p>Automotive Solutions</p>
     </div>
 
-    <div class="section details">
-        <p>📞 <strong>+91 6238726103</strong></p>
-        <p>📧 <strong>yasi.arafath071@gmail.com</strong></p>
-        <p>📍 Aryambavu, Mannarkkad</p>
-    </div>
+    <div class="content">
+        <div class="section">
+            <h3>🛞 Tyre Shop</h3>
+            <a href="tel:6238726103" class="phone-row"><span>6238726103</span> <span style="font-size:10px; opacity:0.6;">YASIR</span></a>
+            <a href="tel:9061819276" class="phone-row"><span>9061819276</span></a>
+        </div>
 
-    <div class="section">
-        <h3>Tyre Shop</h3>
-        <p>Second-hand tyres available & new tyres at affordable prices.</p>
-    </div>
+        <div class="section">
+            <h3>🔋 Battery & Spare Parts</h3>
+            <a href="tel:9744492190" class="phone-row"><span>9744492190</span></a>
+        </div>
 
-    <div class="section">
-        <h3>Battery Shop</h3>
-        <p>All types of batteries available for all needs.</p>
-    </div>
+        <div class="social-grid">
+            <a href="https://wa.me/919744492190" class="social-btn whatsapp" target="_blank">
+                <span>WhatsApp</span>
+            </a>
+            <a href="https://www.instagram.com/ycrarfth?igsh=bDZhczlyb3hwMXc2" class="social-btn instagram" target="_blank">
+                <span>Instagram</span>
+            </a>
+            <div class="social-btn facebook" style="cursor: pointer;">
+                <span>Facebook</span>
+                <span class="coming-soon-tooltip">Coming Soon!</span>
+            </div>
+        </div>
 
-    <div class="section">
-        <h3>Spare Parts</h3>
-        <p>Complete range of 2-wheeler and 3-wheeler spare parts.</p>
-    </div>
+        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasi.arafath071@gmail.com%0AURL:https://www.instagram.com/ycrarfth%0AORG:Tyre, Battery & Spare Parts%0AADR;TYPE=WORK:;;Aryambavu;Mannarkkad;;;India%0AEND:VCARD" 
+           download="Yasir_Arafath.vcf" class="btn-save">
+           ADD TO CONTACTS
+        </a>
 
-    <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0AEMAIL:yasi.arafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts Shop%0AADR;TYPE=WORK:;;Aryambavu;Mannarkkad;;;India%0AEND:VCARD" 
-       download="Yasir_Arafath.vcf" class="btn-save">
-       💾 SAVE CONTACT
-    </a>
-
-    <div class="footer">
-        Aryambavu, Mannarkkad
+        <div class="location-tag">
+            📍 Aryambavu, Mannarkkad
+        </div>
     </div>
 </div>
 
