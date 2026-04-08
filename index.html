@@ -94,10 +94,14 @@
         
         .btn-container { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 25px; }
         .btn { display: inline-block; width: 85%; padding: 14px 0; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 15px; transition: 0.3s ease; }
+        
+        /* Button Colors */
         .btn-wa { background: #25D366; color: white; }
-        .btn-save { background: #e67e22; color: white; }
-        .btn-map { background: #4285F4; color: white; }
         .btn-insta { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; }
+        .btn-map { background: #4285F4; color: white; }
+        .btn-upi { background: #673ab7; color: white; } /* UPI Purple */
+        .btn-save { background: #e67e22; color: white; }
+
         .btn:hover { opacity: 0.9; transform: translateY(-2px); }
 
         .footer { font-size: 11px; color: #444; margin-top: 25px; }
@@ -106,7 +110,7 @@
 <body>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
   <div class="sidenav-content">
       <h2>About Developer</h2>
       <p><strong>Name:</strong> Yasir Arafath</p>
@@ -126,15 +130,15 @@
 
     <div class="section">
         <h3>Tyre Shop</h3>
-        <p>New & Second-hand Tyres affordable price </p>
-        <p>📞 <a href="tel:6238726103" class="phone-link">9061819216</a> (shop)</p>
-        <p>📞 <a href="tel:9061819276" class="phone-link">9744492190</a></p>
-        <p>📞 <a href="tel:9061819276" class="phone-link">9633327823</a></p>
+        <p>New & Second-hand Tyres at affordable price</p>
+        <p>📞 <a href="tel:9061819216" class="phone-link">9061819216</a> (shop)</p>
+        <p>📞 <a href="tel:9744492190" class="phone-link">9744492190</a></p>
+        <p>📞 <a href="tel:9633327823" class="phone-link">9633327823</a></p>
     </div>
 
     <div class="section">
         <h3>Battery & Spare Parts</h3>
-        <p>All types of Batteries and inverters & 2/3 Wheeler Spares</p>
+        <p>All types of Batteries, Inverters & 2/3 Wheeler Spares</p>
         <p>📞 <a href="tel:9744492190" class="phone-link">9744492190</a></p>
     </div>
 
@@ -147,7 +151,10 @@
         <a href="https://wa.me/919744492190" target="_blank" class="btn btn-wa">WHATSAPP US</a>
         <a href="https://www.instagram.com/ycrarfth?igsh=bDZhczlyb3hwMXc2" target="_blank" class="btn btn-insta">INSTAGRAM</a>
         <a href="https://www.google.com/maps/search/Aryambavu+Mannarkkad" target="_blank" class="btn btn-map">📍 OPEN IN GOOGLE MAPS</a>
-        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasi.arafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts%0AEND:VCARD" download="Yasir_Arafath.vcf" class="btn btn-save">💾 SAVE ALL CONTACTS</a>
+        
+        <a href="upi://pay?pa=Q078858105@ybl&pn=PhonePeMerchant&mc=0000&mode=02&purpose=00" class="btn btn-upi">💸 PAY VIA UPI</a>
+        
+        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AN:Arafath;Yasir;;MK;%0AFN:Yasir Arafath MK%0ATEL;TYPE=CELL:6238726103%0ATEL;TYPE=WORK:9061819276%0ATEL;TYPE=HOME:9744492190%0AEMAIL:yasirarafath071@gmail.com%0AORG:Tyre, Battery & Spare Parts%0AEND:VCARD" download="Yasir_Arafath.vcf" class="btn btn-save">💾 SAVE ALL CONTACTS</a>
     </div>
 
     <div class="footer">
